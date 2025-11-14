@@ -1,5 +1,4 @@
 import type { ReactNode } from "react"
-import type React from "react"
 
 type Props = {
     texto: string
@@ -9,7 +8,12 @@ type Props = {
 
 function Boton(props: Props) {
     const contenido = `${props.texto}${props.textoComplementario ?? ""} `
-    return <button type="button">{props.children}</button>
+    return (
+        <>
+            <p>{contenido}</p>
+            <button type="button">{props.children}</button>
+        </>
+    )
 }
 
 export { Boton }

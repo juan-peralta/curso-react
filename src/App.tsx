@@ -1,17 +1,19 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Boton } from './Boton'
 
+import Card from './components/card'
 function App() {
 
-  const [count, setCount] = useState(0)
-  const textBoton = "Enviado";
-  const hijodeBoton = <span>Sumar</span>;
+  const nombre = "Juan Perez";
+  const ocupacion = "Desarrollador";
+  const img = "https://i.pravatar.cc/150?img=21";
+  const img2 = "https://i.pravatar.cc/150?img=22";
+  
+  const textoAdicional = "Texto adicional";
   return (
     <>
-      <div>
+      <div className='flex justify-center '>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -20,28 +22,26 @@ function App() {
         </a>
       </div>
       <h1>Bienvenidos al curso de React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <Boton texto={textBoton} textoComplementario="...." >
-          Enviar
-        </Boton>
-        <Boton texto="Cancelar" textoComplementario="...." >
-          Cancelar
-        </Boton>
-        <Boton texto="Submit">
-          {hijodeBoton}
-        </Boton>
+      <div className="flex m-2-2 gap-4 flex-wrap m-2">
+        <Card img={img} nombre={nombre} ocupacion={ocupacion}>
+          {textoAdicional}
+        </Card>
+
+        <Card img={img2} nombre={nombre} ocupacion={ocupacion}>
+          {textoAdicional}
+        </Card>
+        <Card img={img} nombre={nombre} ocupacion={ocupacion}>
+          {textoAdicional}
+        </Card>
+        <Card img={img2} nombre={nombre} ocupacion={ocupacion}>
+          {textoAdicional}
+        </Card>
+        <Card img={img} nombre={nombre} ocupacion={ocupacion}>
+          {textoAdicional}
+        </Card>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
 export { App };

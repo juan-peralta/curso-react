@@ -1,0 +1,17 @@
+.card {
+width: 260px;
+padding: 16px;
+border: 1px solid #ddd;
+border-radius: 12px;
+margin-bottom: 20px;
+background: white;
+}
+.card img {
+width: 100%;
+border-radius: 8px;
+}
+.card .extra {
+margin-top: 10px;
+font-size: 0.9rem;
+color: #555;
+}
